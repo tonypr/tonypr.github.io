@@ -124,6 +124,14 @@ You should be able to navigate to your [localhost:5000](http://localhost:5000/) 
 
 ## Enable Secure Remote Access
 
-If you don't intend on accessing your self-hosted LLM remotely, skip this step.
+If you don't intend on accessing your self-hosted LLM remotely, feel free to skip this step.
 
-Install [tailscale](https://tailscale.com/).
+### Setting up a VPN
+
+There are many options for setting up a VPN. I went with [Tailscale](https://tailscale.com/) as I've heard it's easy to set up. Setting it up was pretty much hassle free. Essentially just install Tailscale on your devices and they're now connected in a virtual private network. So you can access your desktop from another device, your cellphone for example, even when you're not on the same network.
+
+A possible alternative in case you don't want to use Tailscale is https://netbird.io/. From what I can tell it's 100% open source and should provide the same functionality.
+
+## Check Out Your Setup!
+
+Try it out! You should be able to access your LLM from a remote device connected through a VPN.
