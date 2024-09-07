@@ -68,14 +68,16 @@ You can also try out test prompts with the model using either the `generate` or 
 $ litgpt generate microsoft/phi-2 --prompt "How many days are there in December, 2024?"
 ```
 
-```
+
+Use an interactive chat
+```bash
 $ litgpt chat microsoft/phi-2
 ```
 
 ### Other Models & Configurations
 I found the `microsoft/phi-2` model to be easy to set up but pretty inaccurate. I ended up using `meta-llama/Meta-Llama-3.1-8B-Instruct` instead. If you choose to use Llama models, know that before you can download them you need to request access to the models on the [huggingface](https://huggingface.co/) website. 
 
-If you try running the Llama model and encounter GPU out-of-memory issues you can apply [quantization](https://github.com/Lightning-AI/litgpt/blob/1d37f9a99bb4ba2b7373bc7fc5b8c5a457af48df/tutorials/quantize.md#bnbnf4-dq) to reduce the memory footprint. This might look like this with the Llama model:
+If you try running the Llama model and encounter GPU out-of-memory issues you can apply [quantization](https://github.com/Lightning-AI/litgpt/blob/1d37f9a99bb4ba2b7373bc7fc5b8c5a457af48df/tutorials/quantize.md#bnbnf4-dq) to reduce the memory footprint. With the Llama model the command might look like this:
 
 ```
 $ litgpt serve meta-llama/Meta-Llama-3.1-8B-Instruct \
@@ -85,9 +87,40 @@ $ litgpt serve meta-llama/Meta-Llama-3.1-8B-Instruct \
 ```
 
 
-## Set Up Your LLM UI
-There are many ways to set up a UI for an LLM. This sections shows I went about it.
+## Set Up Your LLM UI 🖥️
+For this setup, I used a simple Flask server to run the UI, which communicates with the LLM backend through HTTP requests.
 
+### Install Dependencies
+First, you'll need to install Flask, a lightweight web framework for Python that makes setting up a web server straightforward. Then install the `requests` library which our Flask app will use to communicate with the litgpt server.
+
+```
+$ pip install Flask
+$ pip install requests
+```
+
+### Server Code
+
+For the server code, my simple app code has this structure:
+```bash
+$ tree
+.
+├── app.py
+└── templates
+    └── index.html
+```
+
+You can find the sources here:
+- [app.py](./source/app.py)
+- [index.html](./source/templates/index.txt)
+
+Note, if using this code, follow the directory structure as Flask expects the template file to be under the templates directory.
+
+Once you have the code in place, start your server:
+```bash
+$ python app.py
+```
+
+You should be able to navigate to your [localhost:5000](http://localhost:5000/) page and see the UI.
 
 ## Enable Secure Remote Access
 
