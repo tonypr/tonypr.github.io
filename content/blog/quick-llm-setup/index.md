@@ -1,7 +1,6 @@
 ---
 title: "Quick Self-Hosted LLM Set Up"
 date: 2024-09-07T13:09:47-04:00
-draft: true
 summary: "Set up an LLM with secure remote access."
 ---
 
