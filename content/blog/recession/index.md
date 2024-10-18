@@ -8,7 +8,7 @@ On August 28th, 2024, the 10-year Treasury yield minus the 2-year Treasury yield
 
 We can see this in the graph below showing 30+ years of data for the 10Y-2Y Treasury yield spread. Soon after the spread corrects, a recession follows.
 
-![Image alt](images/fredgraph.png)
+![Graph](images/fredgraph.png)
 
 [Source](https://fred.stlouisfed.org/graph/?g=1ts7w)
 
