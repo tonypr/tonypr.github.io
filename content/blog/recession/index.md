@@ -1,5 +1,5 @@
 ---
-title: "Recession or Soft landing?"
+title: "Recession or Soft Landing?"
 date: 2024-09-05T20:12:07-04:00
 summary: "A look at the inverted yield curve recession indicator."
 ---
