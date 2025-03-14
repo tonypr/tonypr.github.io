@@ -1,7 +1,7 @@
 ---
 title: "Trends"
 date: 2025-03-14T17:22:15-04:00
-draft: true
+draft: false
 ---
 # Money in US Politics
 
