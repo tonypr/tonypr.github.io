@@ -2,6 +2,7 @@
 title: "Trends"
 date: 2025-03-14T17:22:15-04:00
 draft: false
+summary: "Trends of interest."
 ---
 # Money in US Politics
 
